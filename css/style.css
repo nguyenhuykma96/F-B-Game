@@ -1,0 +1,342 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 768px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+.header__register {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.food {
+  background-image: url("./../img/bg-top.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 762px;
+  max-width: 100%;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.food .icon-arrow {
+  position: absolute;
+  top: 45px;
+  max-width: 84px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.food .icon-arrow:hover {
+  transform: scale(1.5);
+  transition: all 0.3s;
+}
+.food__wrap {
+  padding: 0 30px;
+}
+.food__item {
+  padding: 10px 0;
+}
+.food__item .food__link {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+.food__desc {
+  font-size: 1.4rem;
+  line-height: 16px;
+  font-weight: 500;
+  margin-bottom: 46px;
+}
+.food h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.food h1 {
+  font-size: 4.8rem;
+  line-height: 49px;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.title-text {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 19px;
+  color: #0a0d35;
+}
+
+.food-info {
+  border-radius: 3rem;
+  color: #0a0d35;
+}
+.food-info .photo-by {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 16px;
+  color: #565656;
+  margin-top: 8px;
+  text-align: center;
+}
+.food-info__container {
+  padding-top: 20px;
+}
+.food-info__container:last-child {
+  padding-bottom: 35px;
+}
+.food-info__wrap {
+  padding: 0 3rem;
+  padding-top: 2rem;
+}
+.food-info__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+.food-info__item__desc {
+  margin-bottom: 25px;
+}
+.food-info__item h3 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.food-info__img {
+  border-radius: 50px;
+}
+.food-info__img img {
+  object-fit: cover;
+  width: 100%;
+  max-width: unset;
+}
+
+.form {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./../img/bg-top.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px 30px 0px 0px;
+  color: #ffffff;
+  height: 764px;
+}
+.form__title {
+  font-size: 2rem;
+  line-height: 23px;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin: 0 auto;
+  max-width: 75%;
+}
+.form__input {
+  background-color: transparent;
+  border: unset;
+  border-bottom: 0.5px solid #ffffff;
+  width: 100%;
+  padding-bottom: 10px;
+  margin-bottom: 33px;
+  color: #ffffff;
+}
+.form__input:focus {
+  outline: none;
+}
+.form__input::placeholder {
+  font-size: 1.2rem;
+  line-height: 14px;
+  color: #ffffff;
+}
+.form__wrap {
+  padding-left: 47px;
+  padding-right: 47px;
+}
+.form__phone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.form__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 44px;
+}
+.form .btn-register {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 1.6rem;
+  line-height: 19px;
+  font-weight: 900;
+  background-color: transparent;
+  border-radius: 50px;
+  width: 280px;
+  height: 60px;
+}
+.form .btn-register:focus {
+  outline: none;
+}
+
+.form-ckb {
+  margin-bottom: 16px;
+}
+
+.custom-select {
+  font-size: 12px;
+  position: relative;
+  border-bottom: unset;
+  margin-right: 20px;
+  max-width: 20%;
+}
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: transparent;
+}
+.select-selected::after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+.select-selected .select-arrow-active::after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 9.5px 0;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 0.5px solid;
+}
+.select-items div:first-child,
+.select-selected:first-child {
+  padding-top: 16px;
+}
+
+.select-items div {
+  border-bottom: unset;
+}
+
+.select-items {
+  position: absolute;
+  background-color: transparent;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.styled-checkbox {
+  position: absolute;
+  display: none;
+}
+.styled-checkbox + .form__checkbox label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 18px;
+}
+.styled-checkbox + .form__checkbox label:before {
+  content: "";
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 14px;
+  height: 14px;
+  background: transparent;
+  border: 1px solid #ffffff;
+}
+.styled-checkbox:disabled + .form__checkbox label {
+  color: #ffffff;
+  cursor: auto;
+}
+.styled-checkbox:disabled + .form__checkbox label:before {
+  box-shadow: none;
+  background: transparent;
+}
+.styled-checkbox:checked + .form__checkbox label:after {
+  font-family: "FontAwesome";
+  content: "";
+  color: #ffffff;
+  font-size: 9px;
+  position: absolute;
+  left: 3px;
+  top: -2px;
+  background: transparent;
+}
+
+.copy-right {
+  font-size: 1rem;
+  line-height: 14px;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */

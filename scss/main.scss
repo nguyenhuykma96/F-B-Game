@@ -1,0 +1,321 @@
+@import "./variable.scss";
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 768px;
+}
+.header {
+  @include flex(flex, row, space-between, center);
+  padding: 1.5rem 2rem;
+  &__register {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+  }
+}
+.food {
+  background-image: url("./../img/bg-top.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  @include flex(flex, column, center, center);
+  height: 762px;
+  max-width: 100%;
+  color: $color-white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  .icon-arrow {
+    position: absolute;
+    top: 45px;
+    max-width: 84px;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+      transform: scale(1.5);
+      transition: all 0.3s;
+    }
+  }
+  &__wrap {
+    padding: 0 30px;
+  }
+
+  &__item {
+    padding: 10px 0;
+
+    .food__link {
+      color: $color-white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+  &__desc {
+    @include font(1.4rem, 16px);
+    font-weight: 500;
+    margin-bottom: 46px;
+  }
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  h1 {
+    @include font(4.8rem, 49px);
+    font-weight: 900;
+    margin-bottom: 18px;
+  }
+}
+.title-text {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 19px;
+  color: $color-text-dark;
+}
+.food-info {
+  border-radius: 3rem;
+  color: $color-text-dark;
+  .photo-by {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+    color: #565656;
+    margin-top: 8px;
+    text-align: center;
+  }
+  &__container {
+    padding-top: 20px;
+    &:last-child {
+      padding-bottom: 35px;
+    }
+  }
+  &__wrap {
+    padding: 0 3rem;
+    padding-top: 2rem;
+  }
+  &__title {
+    @include flex(flex, row, space-between, center);
+    background-color: $color-white;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
+  &__item {
+    &__desc {
+      margin-bottom: 25px;
+    }
+    h3 {
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+  }
+  &__img {
+    border-radius: 50px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      max-width: unset;
+    }
+  }
+}
+.form {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./../img/bg-top.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px 30px 0px 0px;
+  color: $color-white;
+  height: 764px;
+  &__title {
+    @include font(2rem, 23px);
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+    max-width: 75%;
+  }
+  &__input {
+    background-color: transparent;
+    border: unset;
+    border-bottom: 0.5px solid $color-white;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 33px;
+    color: $color-white;
+
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      @include font(1.2rem, 14px);
+      color: $color-white;
+    }
+  }
+  &__wrap {
+    padding-left: 47px;
+    padding-right: 47px;
+  }
+  &__phone {
+    @include flex(flex, row, center, center);
+  }
+  &__btn {
+    @include flex();
+    padding-top: 44px;
+  }
+  .btn-register {
+    text-transform: uppercase;
+    color: $color-white;
+    @include font(1.6rem, 19px);
+    font-weight: 900;
+    background-color: transparent;
+    border-radius: 50px;
+    @include size(280px, 60px);
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.form-ckb {
+  margin-bottom: 16px;
+}
+.custom-select {
+  font-size: 12px;
+  position: relative;
+  border-bottom: unset;
+  margin-right: 20px;
+  max-width: 20%;
+  select {
+    display: none;
+  }
+}
+.select-selected {
+  background-color: transparent;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  .select-arrow-active {
+    &::after {
+      border-color: transparent transparent #fff transparent;
+      top: 7px;
+    }
+  }
+}
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 9.5px 0;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 0.5px solid;
+  &:first-child {
+    padding-top: 16px;
+  }
+}
+.select-items div {
+  border-bottom: unset;
+}
+.select-items {
+  position: absolute;
+  background-color: transparent;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.select-hide {
+  display: none;
+}
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.styled-checkbox {
+  position: absolute; // take it out of document flow
+  display: none;
+
+  & + .form__checkbox label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    @include font(1.2rem, 18px);
+  }
+
+  // Box.
+  & + .form__checkbox label:before {
+    content: "";
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    @include size(14px);
+    background: transparent;
+    border: 1px solid $color-white;
+  }
+
+  // Box checked
+  &:checked + .form__checkbox label:before {
+    // background: $color-white;
+  }
+
+  // Disabled state label.
+  &:disabled + .form__checkbox label {
+    color: $color-white;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + .form__checkbox label:before {
+    box-shadow: none;
+    background: transparent;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + .form__checkbox label:after {
+    font-family: "FontAwesome";
+    content: "";
+    color: $color-white;
+    font-size: 9px;
+    position: absolute;
+    left: 3px;
+    top: -2px;
+    background: transparent;
+  }
+}
+
+.copy-right {
+  @include font(1rem, 14px);
+  text-align: center;
+  padding: 12px 0;
+  font-weight: bold;
+}
