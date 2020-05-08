@@ -35,7 +35,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
+  padding: 2rem;
 }
 .header__register {
   font-size: 1.3rem;
@@ -357,6 +357,11 @@ img {
   height: 762px;
   position: relative;
 }
+.game .game__title,
+.game .game__sub {
+  font-size: 2.5rem;
+  line-height: 29px;
+}
 .game__btn button {
   color: #ffffff;
   text-transform: uppercase;
@@ -366,6 +371,7 @@ img {
   background: transparent;
   width: 180px;
   height: 60px;
+  font-weight: 900;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -397,6 +403,146 @@ img {
 }
 .game .set-bg h3 {
   color: #ffffff;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.description {
+  background-color: #000000;
+  color: #ffffff;
+}
+.description__prize p {
+  text-align: justify;
+}
+.description__wrap {
+  padding: 16px 3rem;
+  padding-bottom: 30px;
+}
+.description__desc {
+  font-size: 1.4rem;
+  line-height: 16px;
+  margin-bottom: 43px;
+  text-align: justify;
+}
+.description__item h3 {
+  font-size: 1.6rem;
+  line-height: 19px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.description__item .text-italic {
+  font-size: 1.2rem;
+  line-height: 14px;
+  font-style: italic;
+  margin-bottom: 16px;
+  text-align: justify;
+}
+.description__steps .step {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 26px;
+}
+.description__steps .step__desc {
+  line-height: 16px;
+  margin-left: 12px;
+}
+.description__steps .step__desc p {
+  text-align: justify;
+}
+.description__steps .step img {
+  margin-top: 7px;
+}
+.description .step-two__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 26px;
+  margin-bottom: 36px;
+}
+.description .step-two__btn button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  line-height: 15px;
+  width: 100px;
+  height: 30px;
+  font-weight: bold;
+  margin-right: 8px;
+  border-radius: 30px;
+  background-color: #ffffff;
+}
+.description .step-two__btn button img {
+  margin-right: 8px;
+}
+
+.register-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+.register-profile span {
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ff5c00;
+}
+
+.container-bg {
+  padding: 0 1.6rem;
+  position: relative;
+}
+.container-bg button {
+  width: 180px;
+  height: 60px;
+  font-size: 1.4rem;
+  line-height: 16px;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 30px #ffffff;
+  border: unset;
+}
+.container-bg button:focus {
+  outline: none;
+}
+
+.game-bottom {
+  background-image: url("./../img/bg-5.jpg");
+}
+.game-bottom__desc {
+  position: absolute;
+  top: 40px;
+}
+
+.btn-white {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 75px;
+}
+.btn-white button {
+  background-color: #ffffff;
+  color: #000000;
+  margin-top: 12px;
+}
+.btn-white button:focus {
+  outline: none;
 }
 
 /*# sourceMappingURL=style.css.map */
