@@ -459,6 +459,16 @@ img {
     font-weight: bold;
     color: #ff5c00;
   }
+  img {
+    &:hover {
+      transform: scale(1.5);
+      transition: 0.3s ease-out;
+    }
+    &:focus {
+      transform: scale(1.5);
+      transition: 0.3s ease-out;
+    }
+  }
 }
 .container-bg {
   padding: 0 1.6rem;
@@ -480,6 +490,9 @@ img {
       outline: none;
     }
   }
+  img {
+    width: 100%;
+  }
 }
 .game-bottom {
   background-image: url("./../img/bg-5.jpg");
@@ -500,4 +513,47 @@ img {
       outline: none;
     }
   }
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 5;
+  display: none;
+  transition: opacity 5s ease-out;
+  opacity: 0;
+
+  &__wrap {
+    background-image: url("./../img/popup.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    max-width: 375px;
+    @include flex();
+    position: relative;
+    margin: 0 auto;
+    img {
+      position: absolute;
+      top: 7%;
+      right: 10%;
+    }
+  }
+}
+.show {
+  opacity: 1;
+  display: block;
+}
+.overlay-active {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include size(100vh);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 4;
+  transition: 0.3s;
 }

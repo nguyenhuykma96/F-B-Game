@@ -495,6 +495,14 @@ img {
   font-weight: bold;
   color: #ff5c00;
 }
+.register-profile img:hover {
+  transform: scale(1.5);
+  transition: 0.3s ease-out;
+}
+.register-profile img:focus {
+  transform: scale(1.5);
+  transition: 0.3s ease-out;
+}
 
 .container-bg {
   padding: 0 1.6rem;
@@ -518,6 +526,9 @@ img {
 }
 .container-bg button:focus {
   outline: none;
+}
+.container-bg img {
+  width: 100%;
 }
 
 .game-bottom {
@@ -543,6 +554,55 @@ img {
 }
 .btn-white button:focus {
   outline: none;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 5;
+  display: none;
+  transition: opacity 5s ease-out;
+  opacity: 0;
+}
+.popup__wrap {
+  background-image: url("./../img/popup.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+  max-width: 375px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+}
+.popup__wrap img {
+  position: absolute;
+  top: 7%;
+  right: 10%;
+}
+
+.show {
+  opacity: 1;
+  display: block;
+}
+
+.overlay-active {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vh;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 4;
+  transition: 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */

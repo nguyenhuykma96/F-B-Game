@@ -75,3 +75,15 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
+
+// jquery
+$(document).ready(function() {
+  $(".show-popup").click(function() {
+    $(".overlay").addClass("overlay-active");
+    $(".popup").addClass("show");
+  });
+  $(".popup__wrap img").click(function() {
+    $(".overlay").removeClass("overlay-active");
+    $(".popup").removeClass("show");
+  });
+});
